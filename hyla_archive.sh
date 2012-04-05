@@ -140,7 +140,7 @@ realtime()
 	cp $HYLAROOT/recvq/$FILE.tif $TEMP/$FILE.tif 2>>/tmp/fax_error.log
 	tiff2pdf $TEMP/$FILE.tif -o $TEMP/$FILE.pdf 2>>/tmp/fax_error.log
 	chmod 777 $TEMP/$FILE.pdf 2>>/tmp/fax_error.log
-	cp -p $TEMP/$FILE.pdf $CEL/fax_"$NUM"_`date +%F-%H_%M_%S`.pdf 2>>/tmp/fax_error.log
+	cp -p $TEMP/$FILE.pdf $TARGET/fax_"$NUM"_`date +%F-%H_%M_%S`.pdf 2>>/tmp/fax_error.log
 
 	#remove source
 	rm $TEMP/$FILE.pdf
